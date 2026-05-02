@@ -18,6 +18,8 @@ def lambda_handler(event, context):
             print("Not JSON, raw text:", data_str)
             continue
 
+        print("test")
+
         table.put_item(Item={
             'userId': data['userId'],
             'action': data['action']
